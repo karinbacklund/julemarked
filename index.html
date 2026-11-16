@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Julemarked</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,19 +12,200 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./index.html" page">
+        <img src="./imgs/logo2.png"></a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
-          <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./index.html" aria-current="page">Julemarked 2026</a></li>
+          <li><a href="./svg.html">Kort over området</a></li>
+          <li><a href="./form.html">Nyhedsbrev</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <div class="forside_billede">
+      <video class="video" autoplay muted loop playsinline poster="./imgs/download.mp4">
+        <source src="./imgs/download.mp4" type="video/mp4">
+      </video>
+      <h1><span class="forste_bokstav">J</span>ulemarked</h1>
+      <h2>Gavnø Slot <br>
+        2026</h2>
+    </div>
+
+    <div class="fyll_hela">
+      <div class="indhold">
+        <h2>450+</h2>
+        <P>Besøgende</P>
+      </div>
+      <div class="indhold">
+        <h2>57</h2>
+        <P>Boder</P>
+      </div>
+      <div class="indhold">
+        <h2>4</h2>
+        <P>Spisesteder</P>
+      </div>
+      <div class="indhold">
+        <h2>6</h2>
+        <P>Partnere</P>
+      </div>
+    </div>
+    <section class="pop_3">
+      <article class="card">
+        <div class="card-content flow">
+          <h3>Vores boder</h3>
+          <p>
+            Det findes hele 57 boder på vores marked. <br>
+            Find siste års mest populære boder og blive inspireret her. </p>
+          <img src="./imgs/nissemedkarta.webp" alt="Billede af nisse med kort">
+          <button class="btn" popovertarget="kort_oversigt">
+            Se boderne
+          </button>
+        </div>
+
+        <div class="kort_oversigt" id="kort_oversigt" popover>
+          <img src="./imgs/nissemedkarta.webp" alt="Billede af nisse med kort">
+          <div class="tekst_kort_oversigt">
+            <h2>Vores boder</h2>
+            <p>
+              Det er hele 57 boder på julemarkedet. De fem mest populære er:<br>
+
+              - Bolcheboden (plads 15) <br>
+              - Nissernes smykkesbod (plads 3) <br>
+              - Familien Andersens hjemmelavede lys (plads 41) <br>
+              - Gavnø Boldklub (plads 30) <br>
+              - Keramikboden (plads 8) <br>
+            </p>
+            <button class="btn" popovertarget="kort_oversigt">
+              Luk
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-content flow">
+          <h3>Hvad koster det?</h3>
+          <p>
+            Gavnø julemarked er for alle. Derfor har vi dette år eksta lave priser for at komme ind. Find oversigten for
+            de sænkte priserne her.
+          </p>
+          <img src="./imgs/biljett.webp" alt="Billede af en bilett">
+          <button class="btn" popovertarget="kostnad">
+            Prisliste
+          </button>
+        </div>
+
+        <div class="kostnad" id="kostnad" popover>
+          <img src="./imgs/biljett.webp" alt="Billede af en hånd og en billett">
+          <div class="program-content flow">
+            <h2>Entré</h2>
+            <p>
+
+              Barn (0-12år) - GRATIS
+              <br>
+              Ungdom (12-18år) - 15 kr
+              <br>
+              Voksen - 30kr
+              <br>
+
+              Pensionist (65+) - 15 kr
+
+            </p>
+            <button class="btn" popovertarget="kostnad">
+              Luk
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-content flow">
+          <h3>Besøg af julemanden</h3>
+          <p>
+            Ingen er for gammel for julemanden. Gør årets besøg til noget helt særligt og kom forbi og oplev julemagien
+            ved julemandens hus.
+          </p>
+          <img src="./imgs/tomtemedbarn.webp" alt="Billede af julemand og to børn">
+          <button class="btn" popovertarget="julemanden">
+            Mød julemanden
+          </button>
+        </div>
+
+        <div class="julemanden" id="julemanden" popover>
+          <img src="./imgs/tomtemedbarn.webp" alt="Billede af julemand og to børn">
+          <div class="program-content flow">
+            <h2>Besøg af julemanden</h2>
+            <p>
+              Nu kan du besøge julemanden på Gavnø julemarked.
+              Julemanden er på plads hver dag fra: <br>
+              09:00-11:00 <br>
+              Frokostpause 11:00-12:00 <br>
+              12:00-15:00
+
+            </p>
+            <button class="btn" popovertarget="julemanden">
+              Luk
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <div>
+      <svg class="svg-kort" viewBox="0 0 930.77 540.24">
+        <use href="./imgs/julemarked-kort (3).svg#bg"></use>
+        <use href="./imgs/julemarked-kort (3).svg#indgang"></use>
+        <use class="kagemand" href="./imgs/julemarked-kort (3).svg#km"></use>
+      </svg>
+    </div>
+
+    <div class="accordion">
+      <details class="accordion-item" name="accordion">
+        <summary>Spisesteder</summary>
+        <div>
+          På Gavnø julemarked kan man finde mange forskellige hyggelige spisesteder. Man kan købe varme æbleskiver
+          med
+          flormelis og syltetøj. Der er også en bod med lækre pølser og varm kakao. Hvis man er sulten, kan man prøve en
+          bod med
+          juleburgere eller flæskestegssandwich. Til sidst kan man nyde duften af brændte mandler og andre søde
+          julesnacks.
+        </div>
+      </details>
+      <details class="accordion-item" name="accordion">
+        <summary>Nissescenen</summary>
+        <div>
+          Her finder du vores hyggelig nissescene, hvor der sker mange sjove ting. Her kan børn og voksne se nisser
+          synge julesange og
+          optræde med små
+          skuespil. Der vil også være konkurrencer og lege, hvor publikum kan være med.
+        </div>
+      </details>
+      <details class="accordion-item" name="accordion">
+        <summary>Boderne</summary>
+        <div>
+          På Gavnø julemarked er der hele 57 forskellige boder med alt muligt spændende. Her kan man finde flotte
+          julegaver,
+          håndlavet pynt og hyggelige ting til hjemmet. Nogle boder sælger lækker mad og søde julesager, mens andre har
+          tøj,
+          smykker og kreative produkter. Der er noget for både børn og voksne, så alle kan finde noget, de kan lide.
+        </div>
+      </details>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
