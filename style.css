@@ -12,6 +12,7 @@ html {
 
   background: var(--color-page);
   color: var(--color-text);
+  color-scheme: light dark;
 }
 /****************Fonts**************/
 @font-face {
@@ -107,30 +108,6 @@ main > .forside_billede {
   grid-column: 1 / -1;
 }
 
-.svg-page {
-  display: grid;
-  gap: var(--space-2);
-}
-
-.svg-intro {
-  display: grid;
-  gap: var(--space-1);
-  max-width: 60ch;
-}
-
-.svg-intro p {
-  color: var(--color-muted);
-}
-
-.svg-layout {
-  display: grid;
-  gap: var(--space-2);
-  align-items: start;
-  @media (width > 800px) {
-    grid-template-columns: 1fr min(40%, 36ch);
-  }
-}
-
 .form-page {
   display: grid;
   gap: var(--space-2);
@@ -158,6 +135,10 @@ main > .forside_billede {
   @media (width > 800px) {
     grid-template-columns: minmax(0, 44ch) minmax(20rem, 1fr);
   }
+}
+
+@view-transition {
+  navigation: auto;
 }
 
 .opsamling-intro {
@@ -359,22 +340,6 @@ main > .forside_billede {
   padding: var(--space-1);
 }
 
-/* Details */
-.accordion {
-  display: grid;
-  gap: var(--space-05);
-}
-
-.accordion-item {
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-}
-
-.accordion-item p {
-  padding: 0 var(--space-1) var(--space-1);
-  color: var(--color-muted);
-}
-
 /* Knap/link */
 .button {
   justify-self: start;
@@ -388,6 +353,27 @@ main > .forside_billede {
 
 /**********Forside********/
 
+@media screen and (max-width: 600px) {
+  .pop_3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .fyll_hela {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 90%;
+    margin: 50px auto 0;
+  }
+
+  .forside_billede h1 {
+    font-size: 3rem !important;
+  }
+
+  .forste_bokstav {
+    font-size: 5rem !important;
+  }
+}
+
 .forside_billede h1 {
   position: absolute;
   top: 45%;
@@ -396,10 +382,10 @@ main > .forside_billede {
   color: #8e1200;
   z-index: 2;
   white-space: nowrap;
-  font-size: 10rem;
+  font-size: clamp(2rem, 8vw, 10rem);
   text-shadow: 2px 2px 4px rgba(243, 234, 185, 0.945);
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .video {
@@ -684,4 +670,79 @@ input {
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+/***************SVG**********/
+.svg-page {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.svg-intro {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.svg-intro p {
+  color: var(--color-muted);
+}
+
+.svg-layout {
+  display: grid;
+  gap: var(--space-2);
+  align-items: start;
+  @media (width > 800px) {
+    grid-template-columns: 1fr min(40%, 36ch);
+  }
+}
+
+/* Details */
+.accordion {
+  display: grid;
+  gap: var(--space-05);
+}
+
+.tekst_svg {
+  font-family: "Arapey-Regular" !important;
+  padding: 10px;
+}
+
+.svg-placeholder {
+  min-height: auto;
+  height: fit-content;
+  padding: 0;
+  border-radius: 20px;
+  background-color: #feefde;
+}
+
+summary {
+  padding: 20px;
+}
+
+/************pil SVG************/
+
+.accordion-item summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-item summary::after {
+  content: "⌄";
+  color: #8e1200;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/*********kagemand svg************/
+.kagemand {
+  transition: transform 1s ease;
+  transform-box: view-box;
+  transform-origin: 0 0;
 }
