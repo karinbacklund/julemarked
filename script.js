@@ -9,27 +9,33 @@ if (opsamlingPlaceholder) {
   // Eksempel: params.get("navn") henter værdien fra et formularfelt med name="navn".
 }
 
-/* Animationen på rabatbiletten */
-const rabatBillet = document.querySelector(".rabat-billet");
+const kagemand = document.querySelector(".kagemand");
 
-// Opretter en "observer", der holder øje med, hvornår billetten kommer ind i skærmbilledet
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      // Når billetten er synlig på skærmen
-      if (entry.isIntersecting) {
-        entry.target.classList.add("synlig");
-        // Stopper med at observere, så animationen kun kører én gang
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.2, // Animationen starter, når 20% af billetten er rullet ind på skærmen
-  },
-);
+const spisesteder = document.querySelector("#spisesteder");
+const kalkebakken = document.querySelector("#kalkebakken");
+const gavevarksted = document.querySelector("#gavevarksted");
 
-// Starter overvågningen, hvis billetten findes på siden
-if (rabatBillet) {
-  observer.observe(rabatBillet);
-}
+spisesteder.querySelector("summary").addEventListener("click", () => {
+  kagemand.style.transform = "translate(-270px, -215px)";
+});
+
+kalkebakken.querySelector("summary").addEventListener("click", () => {
+  kagemand.style.transform = "translate(-55px, -390px)";
+});
+
+gavevarksted.querySelector("summary").addEventListener("click", () => {
+  kagemand.style.transform = "translate(300px, -190px)";
+});
+
+// Flytta tillbaka kagemanden när alla menyer är stängda
+const accordion = document.querySelectorAll(".accordion-item");
+
+accordion.forEach((item) => {
+  item.addEventListener("toggle", () => {
+    const allaStangda = [...accordion].every((details) => !details.open);
+
+    if (allaStangda) {
+      kagemand.style.transform = "translate(0px, 0px)";
+    }
+  });
+});

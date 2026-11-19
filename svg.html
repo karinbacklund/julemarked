@@ -28,39 +28,78 @@
   <main>
     <section class="svg-page">
       <header class="svg-intro">
-        <h1>Interaktiv SVG</h1>
-        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
+        <h1>Kort over området</h1>
       </header>
 
       <section class="svg-layout">
-        <div class="svg-placeholder"></div>
 
-        <article class="panel">
-          <h2>Udforsk eventet</h2>
+        <div>
+          <svg class="svg-kort" viewBox="0 0 930.77 540.24">
+            <use href="./imgs/julemarked-kort.svg#bg"></use>
+            <use href="./imgs/julemarked-kort.svg#indgang"></use>
+            <use class="kagemand" href="./imgs/julemarked-kort.svg#km"></use>
+          </svg>
+        </div>
+        <div class="svg-placeholder">
+
           <div class="accordion">
-            <!-- TODO: Lav om til details/summary -->
-            <div class="accordion-item">
-              <h3>Punkt 1</h3>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 2</h3>
-              <p>Beskriv andet område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 3</h3>
-              <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
-            </div>
+            <details class="accordion-item" name="accordion" id="spisesteder">
+              <summary>Spisesteder</summary>
+              <div class="tekst_svg">
+                På julemarkedet finder man mange hyggelige spisesteder med lækker mad og varme drikke. Man kan blandt
+                andet købe
+                æbleskiver med syltetøj, flæskestegssandwich og varm kakao. Der er også søde fristelser
+                som brændte
+                mandler og andre lækre julesnacks.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" id="kalkebakken">
+              <summary>Kælkebakken</summary>
+              <div class="tekst_svg">
+                På Gavnø kan børn og voksne prøve den hyggelige kælkebakke. Her kan man suse ned ad bakken og
+                have det sjovt
+                sammen med familie og venner. Det er en sjov vinteraktivitet, hvor man kan mærke julestemningen og få
+                røde kinder.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" id="gavevarksted">
+              <summary>Gaveværksted</summary>
+              <div class="tekst_svg">
+                ikke det der med børn og voksne
+                I julemarkedets gaveværksted kan man lave sine egne personlige julegaver. Her kan man slippe
+                kreativiteten løs og skabe
+                unikke gaver til familie og venner. Det er en hyggelig aktivitet, hvor man kan fordybe sig i det
+                kreative og komme i
+                julestemning.
+              </div>
+            </details>
           </div>
-        </article>
+        </div>
+
+
       </section>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+      <div class="footer-kontakt">
+        <h4>KONTAKT</h4>
+        <p>GAVNØ 2, 4700 NÆSTVED</p>
+        <p>+4524871063</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">
+          <img src="./imgs/insta.png" alt="Instagram">
+        </a>
+        <a href="#" aria-label="YouTube">
+          <img src="./imgs/youtube.png" alt="YouTube">
+        </a>
+        <a href="#" aria-label="Snapchat">
+          <img src="./imgs/snap.png" alt="Snapchat">
+        </a>
+      </div>
     </div>
   </footer>
   <script src="./script.js"></script>
