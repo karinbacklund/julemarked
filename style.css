@@ -630,6 +630,28 @@ main > .forside_billede {
     box-shadow 0.4s ease;
 }
 
+.btn_kort {
+  background-color: #5f3221;
+  color: #f9e9e2;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+  font-family: "AbrilFatface";
+  transition:
+    background-color 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.btn_kort:hover {
+  background-color: #8e1200;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
 .btn:hover {
   background-color: #8e1200;
   transform: translateY(-5px);
@@ -764,6 +786,10 @@ input {
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+.spørgsmål {
+  margin-bottom: 40px;
 }
 
 /******************footer*************/
