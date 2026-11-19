@@ -973,3 +973,24 @@ summary {
     margin-bottom: 1.5rem;
   }
 }
+
+/*********Variation************/
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%;
+  max-width: 450px;
+  padding: 0.75rem 1rem;
+  font-family: "Arapey-Regular", serif;
+  font-size: 1.2rem;
+  background-color: #d8d8d8;
+  color: #5f3221;
+  border-radius: 20px;
+  border: none;
+  box-sizing: border-box;
+}
